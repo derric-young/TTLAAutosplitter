@@ -5,6 +5,7 @@ state("ttla-act1-2-0") {}
 state("the-tubbyland-archives-act-1-v1-0-1") {}
 state("the-tubbyland-archives-act-1") {}
 state("ttla-thedream") {}
+state("ttla-act1-2-5-0") {}
 // the EXE Names Here happen to Be the Defualt EXE Names This Game was Distributed With
 // This is the Init Code. Its Purpose is to Get the Code Scan for the Game, Detects if its Act's 1-4 or The Dream (Act 2-4 not supported as there not out) and Sets the Values for the Proper Code Execution.
 init
@@ -14,7 +15,7 @@ init
     var ptr = scanner.Scan(new SigScanTarget(2, "8B 3D ???????? 8B F7"));
     if (ptr == IntPtr.Zero) throw new NullReferenceException("Sigscanning failed!");
     vars.FrameID = new MemoryWatcher<int>(new DeepPointer(game.ReadPointer(ptr), game.ReadValue<int>(ptr + 0xC)));
-//  This Part Replaces the Current EXE Names to instead of being for example being post-shift-2-part-a is instead replaced with post shift 2 Act 1. also  defualts vars.version to X
+//  This Part Replaces the Current EXE Names to instead of being for example being whatever act it is also  defualts vars.version to X
     var gameName = game.ProcessName.ToLower().Replace("-", " ");
     vars.version = 'X';
 //  This Detects if the Game is Act 1 or Part B
