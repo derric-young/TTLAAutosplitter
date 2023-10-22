@@ -7,6 +7,7 @@ state("the-tubbyland-archives-act-1") {}
 state("ttla-thedream") {}
 state("ttla-act1-2-5-0") {}
 state("ttla-act1-2.6.2") {}
+state("ttla-act1-2.6.3") {}
 // the EXE Names Here happen to Be the Defualt EXE Names This Game was Distributed With
 // This is the Init Code. Its Purpose is to Get the Code Scan for the Game, Detects if its Act's 1-4 or The Dream (Act 2-4 not supported as there not out) and Sets the Values for the Proper Code Execution.
 init
